@@ -9,3 +9,24 @@ body {
   justify-content: center;
   margin: 0;
 }
+
+#header {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.header-logo {
+  padding-right: 3rem;
+}
+
+.header-logo img {
+  width: 250px;
+  height: 250px;
+}
+
+.header-info {
+  border: 5px solid #34b6c0;
+  padding: 10px;
+  margin-left: 3rem;
+}
