@@ -6,6 +6,8 @@ const select = document.querySelector("#main-select");
 const option = document.querySelectorAll("option");
 const btn = document.querySelector("#main-submit");
 const calculateValue = document.querySelector(".sumbit-value");
+const divCalculate = document.querySelector(".main-currency-convertion");
+const para = document.querySelector(".main-currency-convertion-para");
 let selectedCurrency = "eur";
 
 // Funkcja do pobierania wybranej opcji (waluty) przez użytkownika
@@ -19,7 +21,15 @@ const calculatedCurrency = (e) => {
   e.preventDefault();
   const currency = getCurrency();
   const url = `http://api.nbp.pl/api/exchangerates/rates/a/${currency}/`;
+  const ldsRing = document.createElement("div");
+  ldsRing.classList.add("lds-ring");
+  for (let i = 0; i < 4; i++) {
+    const div = document.createElement("div");
+    ldsRing.appendChild(div);
+  }
 
+  divCalculate.appendChild(ldsRing);
+  
   fetch(url)
     .then((response) => response.json())
     .then((data) => {

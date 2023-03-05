@@ -17,21 +17,24 @@
       content="Basic application using an API for currency conversion."
     />
     <title>Currency Convert</title>
-    <link rel="stylesheet" href="/css/reset.css">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body>
-    <header id = "header">
-      <div class = "header-logo">
-        <img src="/images/currency-converter-logo.png" alt="Currency converter logo">
+    <header id="header">
+      <div class="header-logo">
+        <img
+          src="/images/currency-converter-logo.png"
+          alt="Currency converter logo"
+        />
       </div>
-      <div class = "header-info">
+      <div class="header-info">
         <h1 class="header-info-para">Currency conversion</h1>
       </div>
     </header>
-    <main id = "main">
-      <form class = "main-form">
-        <input type="number" name="value" id="value" placeholder="Value...">
+    <main id="main">
+      <form class="main-form">
+        <input type="number" name="value" id="value" placeholder="Value..." />
         <select id="main-select">
           <option value="eur">EUR</option>
           <option value="usd">USD</option>
@@ -40,7 +43,7 @@
         <button id="main-submit" class="btn" type="submit">Calculate</button>
       </form>
       <div class="main-currency-convertion">
-        <p>It is <span class="sumbit-value"></span>PLN.</p>
+        <p class="main-currency-convertion-para">It is <span class="sumbit-value"></span>PLN.</p>
       </div>
     </main>
     <script src="/js/script.js"></script>
