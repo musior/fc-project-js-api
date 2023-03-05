@@ -10,6 +10,13 @@ body {
   margin: 0;
 }
 
+h1,
+span,
+p, select, input, button {
+  font-family: "Audiowide", cursive;
+  margin: 5px;
+}
+
 #header {
   display: flex;
   align-items: center;
