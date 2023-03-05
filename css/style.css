@@ -21,6 +21,7 @@ p, select, input, button {
   display: flex;
   align-items: center;
   margin-top: 1rem;
+  width: 65%;
 }
 
 .header-logo {
@@ -33,8 +34,6 @@ p, select, input, button {
 }
 
 .header-info {
-  border: 5px solid #34b6c0;
-  padding: 10px;
   margin-left: 3rem;
 }
 
