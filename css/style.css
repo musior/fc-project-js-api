@@ -130,3 +130,9 @@ p, select, input, button {
     width: auto;
   }
 }
+
+@media screen and (min-width: 1440px) {
+  #header {
+    width: 60%;
+  }
+}
