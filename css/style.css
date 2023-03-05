@@ -18,14 +18,9 @@ p, select, input, button {
 }
 
 #header {
-  display: flex;
-  align-items: center;
+  text-align: center;
   margin-top: 1rem;
-  width: 65%;
-}
-
-.header-logo {
-  padding-right: 3rem;
+  width: 100%;
 }
 
 .header-logo img {
@@ -33,12 +28,9 @@ p, select, input, button {
   height: 250px;
 }
 
-.header-info {
-  margin-left: 3rem;
-}
-
 #main {
   margin-top: 50px;
+  text-align: center;
 }
 
 .main-form {
@@ -58,6 +50,10 @@ p, select, input, button {
   padding: 5px 10px;
 }
 
+#value {
+  width: 90%;
+}
+
 #main-select option {
   background-color: #1c1d26;
 }
@@ -68,6 +64,7 @@ p, select, input, button {
 
 .main-currency-convertion {
   text-align: center;
+  margin-bottom: 2rem;
 }
 
 /* Loader styling */
@@ -110,5 +107,26 @@ p, select, input, button {
 
   100% {
     transform: rotate(360deg);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #header {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    width: 85%;
+  }
+
+  .header-logo {
+    padding-right: 3rem;
+  }
+
+  .header-info {
+    margin-left: 3rem;
+  }
+
+  #value {
+    width: auto;
   }
 }
