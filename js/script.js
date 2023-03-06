@@ -21,7 +21,7 @@ const calculatedCurrency = (e) => {
   e.preventDefault();
   divCalculate.innerHTML = "";
   const currency = getCurrency();
-  const url = `http://api.nbp.pl/api/exchangerates/rates/a/${currency}/`;
+  const url = `https://api.nbp.pl/api/exchangerates/rates/a/${currency}/`;
 
   const ldsRing = document.createElement("div");
   ldsRing.classList.add("lds-ring");
