@@ -32,7 +32,7 @@
         />
       </div>
       <div class="header-info">
-        <h1 class="header-info-para">Currency converter - this is a small application that converts a given currency into zlotys based on current exchange rates.</h1>
+        <h1 class="header-info-para">Currency converter - this is a small application that converts a given currency into PLN based on current exchange rates.</h1>
       </div>
     </header>
     <main id="main">
@@ -43,9 +43,9 @@
           <option value="usd">USD</option>
           <option value="chf">CHF</option>
         </select>
-        <button id="main-submit" class="btn" type="submit">Calculate</button>
+        <button id="main-submit" class="btn" type="submit" onclick="document.location='#wynik'">Calculate</button>
       </form>
-      <div class="main-currency-convertion">
+      <div class="main-currency-convertion" id="wynik">
       </div>
     </main>
     <script src="/js/script.js"></script>
