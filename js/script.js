@@ -6,13 +6,8 @@ const select = document.querySelector("#main-select");
 const btn = document.querySelector("#main-submit");
 const resultCalculate = document.querySelector(".main-currency-convertion");
 
-// Funkcja pobierająca aktualny kurs danej waluty, przeliczająca ją na złotówki i wyświetlająca wynik końcowy
-const calculatedCurrency = (e) => {
-  e.preventDefault();
-  resultCalculate.innerHTML = "";
-  const currency = select.options[select.selectedIndex].value;
-  const url = `http://api.nbp.pl/api/exchangerates/rates/a/${currency}/`;
-
+// Funkcja tworząca loader
+const loaderCreate = () => {
   const ldsRing = document.createElement("div");
   ldsRing.classList.add("lds-ring");
   for (let i = 0; i < 4; i++) {
@@ -20,6 +15,17 @@ const calculatedCurrency = (e) => {
     ldsRing.appendChild(div);
   }
   resultCalculate.appendChild(ldsRing);
+  return ldsRing;
+}
+
+// Funkcja pobierająca aktualny kurs danej waluty, przeliczająca ją na złotówki i wyświetlająca wynik końcowy
+const calculatedCurrency = (e) => {
+  e.preventDefault();
+  resultCalculate.innerHTML = "";
+  const currency = select.options[select.selectedIndex].value;
+  const url = `http://api.nbp.pl/api/exchangerates/rates/a/${currency}/`;
+
+  loaderCreate();
 
   fetch(url)
     .then((response) => response.json())
