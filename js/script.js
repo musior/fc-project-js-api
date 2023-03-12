@@ -31,7 +31,7 @@ const calculatedCurrency = (e) => {
         const p = document.createElement("p");
         resultCalculate.appendChild(p);
         p.innerHTML = `It is <span class="sumbit-value">${calculate}</span>PLN.`;
-      }, 5000);
+      }, 1500);
     });
 }
 
