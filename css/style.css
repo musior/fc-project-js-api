@@ -12,7 +12,10 @@ body {
 
 h1,
 span,
-p, select, input, button {
+p,
+select,
+input,
+button {
   font-family: "Audiowide", cursive;
   margin: 5px;
 }
@@ -138,5 +141,11 @@ p, select, input, button {
 @media screen and (min-width: 1440px) {
   #header {
     width: 60%;
+  }
+
+  #main-submit:hover {
+    background-color: #fff;
+    color: #614c4c;
+    transition: 0.5s;
   }
 }
