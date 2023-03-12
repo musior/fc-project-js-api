@@ -54,6 +54,10 @@ p, select, input, button {
   width: 90%;
 }
 
+#value:focus {
+  border-color: #247b81;
+}
+
 #main-select option {
   background-color: #1c1d26;
 }
