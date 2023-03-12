@@ -23,7 +23,7 @@ const calculatedCurrency = (e) => {
   e.preventDefault();
   resultCalculate.innerHTML = "";
   const currency = select.options[select.selectedIndex].value;
-  const url = `http://api.nbp.pl/api/exchangerates/rates/a/${currency}/`;
+  const url = `https://api.nbp.pl/api/exchangerates/rates/a/${currency}/`;
 
   loaderCreate();
 
