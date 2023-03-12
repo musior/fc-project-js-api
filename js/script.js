@@ -8,19 +8,12 @@ const btn = document.querySelector("#main-submit");
 const calculateValue = document.querySelector(".sumbit-value");
 const divCalculate = document.querySelector(".main-currency-convertion");
 const para = document.querySelector(".main-currency-convertion-para");
-let selectedCurrency = "eur";
-
-// Funkcja do pobierania wybranej opcji (waluty) przez użytkownika
-const getCurrency = () => {
-  selectedCurrency = select.options[select.selectedIndex].value;
-  return selectedCurrency;
-}
 
 // Funkcja pobierająca aktualny kurs danej waluty, przeliczająca ją na złotówki i wyświetlająca wynik końcowy
 const calculatedCurrency = (e) => {
   e.preventDefault();
   divCalculate.innerHTML = "";
-  const currency = getCurrency();
+  const currency = select.options[select.selectedIndex].value;
   const url = `http://api.nbp.pl/api/exchangerates/rates/a/${currency}/`;
 
   const ldsRing = document.createElement("div");
@@ -45,5 +38,4 @@ const calculatedCurrency = (e) => {
     });
 }
 
-select.addEventListener("change", getCurrency);
 form.addEventListener("submit", calculatedCurrency);
